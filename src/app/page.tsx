@@ -45,7 +45,7 @@ export default function MiniCraft() {
           </PulsatingButton>
           <BorderBeam
             size={800}
-            delay={5}
+            delay={1}
             duration={10}
             borderWidth={2}
           />
