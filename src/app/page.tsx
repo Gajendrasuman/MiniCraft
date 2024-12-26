@@ -20,7 +20,7 @@ export default function MiniCraft() {
         numSquares={30}
         maxOpacity={0.3}
         duration={3}
-        repeatDelay={1}
+        repeatDelay={0.1}
         height={50}
         width={50}
         className={cn(
