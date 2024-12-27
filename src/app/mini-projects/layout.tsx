@@ -12,7 +12,7 @@ export default function Main({
 }>) {
   return (
       <html lang="en">
-        <body className={`antialiased`}>
+        <body>
           {children}
         </body>
       </html>
