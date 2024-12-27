@@ -69,8 +69,8 @@ export default function AnalogClock(): React.ReactNode {
 
                         <span className="text-black absolute " style={{ right: "calc(23.5% + 0.5ch)", top: "calc(8% - 1.5ch)" }}>1</span>
                         <span className="text-black absolute " style={{ right: "calc(11% - 1ch)", top: "calc(22% - 0.4ch)" }}>2</span>
-                        <span className="text-black absolute " style={{ right: "calc(23.5% + 0.2ch)", bottom: "calc(8% - 0.9ch)" }}>4</span>
-                        <span className="text-black absolute " style={{ right: "calc(6% + 0.2ch)", bottom: "calc(26.5% - 1.5ch)" }}>5</span>
+                        <span className="text-black absolute " style={{ right: "calc(23.5% + 0.2ch)", bottom: "calc(8% - 0.9ch)" }}>5</span>
+                        <span className="text-black absolute " style={{ right: "calc(6% + 0.2ch)", bottom: "calc(26.5% - 1.5ch)" }}>4</span>
 
                         <span className="text-black absolute " style={{ left: "calc(23.5% + 0.5ch)", top: "calc(8% - 1.5ch)" }}>11</span>
                         <span className="text-black absolute " style={{ left: "calc(11% - 1ch)", top: "calc(22% - 0.4ch)" }}>10</span>
