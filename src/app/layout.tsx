@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "MiniCraft",
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Analytics/>
         {children}
       </body>
     </html>
