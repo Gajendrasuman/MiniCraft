@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect, useRef, LinkHTMLAttributes } from "react"
+import React, { useState, useEffect, useRef} from "react"
 import { SiXiaomi } from "react-icons/si";
 import { FaPowerOff } from "react-icons/fa"
 import { IoArrowBackCircleSharp } from "react-icons/io5";
@@ -65,7 +65,7 @@ export default function MiTv(): React.ReactNode {
     const [tvChannel, setTvChannel] = useState<number>(5);
     const [started, setStarted] = useState<boolean>(false);
     const [special, setSpecial] = useState<string>("");
-    const [status, setStatus] = useState<boolean>(false)
+    // const [status, setStatus] = useState<boolean>(false)
 
     const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -215,8 +215,8 @@ export default function MiTv(): React.ReactNode {
                     </div>
 
                     <div className="arrowButtons cursor-pointer overflow-hidden relative aspect-square rounded-full w-24 left-1/2 -translate-x-1/2 top-[23%] bg-zinc-800">
-                        <div onClick={() => setStatus(true)} className=" cursor-pointer topkey key absolute aspect-square w-12 bg-zinc-900 rotate-45 left-1/2 -translate-x-1/2 -top-1/2 translate-y-[80%]"></div>
-                        <div onClick={() => setStatus(false)} className=" cursor-pointer bottomkey key absolute aspect-square w-12 bg-zinc-900 rotate-45 left-1/2 -translate-x-1/2 top-1/2 translate-y-[20%]"></div>
+                        <div className=" cursor-pointer topkey key absolute aspect-square w-12 bg-zinc-900 rotate-45 left-1/2 -translate-x-1/2 -top-1/2 translate-y-[80%]"></div>
+                        <div className=" cursor-pointer bottomkey key absolute aspect-square w-12 bg-zinc-900 rotate-45 left-1/2 -translate-x-1/2 top-1/2 translate-y-[20%]"></div>
                         <div onClick={() => { setTvChannel(tvChannel - 1 < 0 ? 4 : tvChannel - 1); setSpecial("")}} className=" cursor-pointer leftkey key absolute aspect-square w-12 bg-zinc-900 rotate-45 top-1/2 -translate-y-1/2 -left-1/2 translate-x-[80%]"></div>
                         <div onClick={() => { setTvChannel(tvChannel + 1 > 4 ? 0 : tvChannel + 1); setSpecial("")}} className=" cursor-pointer rightkey key absolute aspect-square w-12 bg-zinc-900 rotate-45 top-1/2 -translate-y-1/2 left-1/2 translate-x-[20%]"></div>
 
