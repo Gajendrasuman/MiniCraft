@@ -77,7 +77,7 @@ export default function AnalogClock(): React.ReactNode {
                         <span className="text-black absolute " style={{ left: "calc(23.5% + 0.2ch)", bottom: "calc(8% - 0.9ch)" }}>7</span>
                         <span className="text-black absolute " style={{ left: "calc(6% + 0.2ch)", bottom: "calc(26.5% - 1.5ch)" }}>8</span>
                         
-                        <div className="center w-[6px] aspect-square bg-black rounded-full absolute" style={{left:"calc(50% - 3px)", top:"calc(50% - 3px)"}}></div>
+                        <div className="center w-[12px] aspect-square bg-black rounded-full absolute" style={{left:"calc(50% - 6px)", top:"calc(50% - 6px)"}}></div>
                         <div className="hour w-1 h-[35%] absolute rounded-full bg-gradient-to-b to-[#fff0] from-[#000d]" style={{left: "calc(50% - 2px)", top: "15%", transformOrigin: "50% 100%", rotate: `${hr}deg`}}></div>
                         <div className="minute w-1 h-[45%] rounded-full absolute bg-gradient-to-b to-[#0000] from-[#000d]" style={{ left: "calc(50% - 2px)", top: "5%", rotate: `${mn}deg`, transformOrigin: "50% 100%"}}></div>
                         <div className="hour w-0.5 h-[50%] rounded-full absolute bg-gradient-to-b to-[#fff0] from-[#f00]" style={{ left: "calc(50% - 1px)", top: "0%", transformOrigin: "50% 100%", rotate: `${sd}deg` }}></div>

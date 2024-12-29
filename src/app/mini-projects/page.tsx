@@ -10,6 +10,11 @@ export default function MiniProjects(): React.ReactNode {
                             ANALOG CLOCK
                         </div>
                     </Link>
+                    <Link href={"/mini-projects/pages/mi-tv"}>
+                        <div className="p1 text-text">
+                            MI TV
+                        </div>
+                    </Link>
                 </div>
             </section>
         </main>
