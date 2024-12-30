@@ -15,6 +15,16 @@ export default function MiniProjects(): React.ReactNode {
                             MI TV
                         </div>
                     </Link>
+                    <Link href={"/mini-projects/pages/speech-to-text"}>
+                        <div className="p1 text-text">
+                            Speech to Text
+                        </div>
+                    </Link>
+                    <Link href={"/mini-projects/pages/sticky-notes"}>
+                        <div className="p1 text-text">
+                            Sticky Notes
+                        </div>
+                    </Link>
                 </div>
             </section>
         </main>
