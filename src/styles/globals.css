@@ -12,8 +12,8 @@
   --button-hover: #333333;
 }
 
-body{
-  overflow-x: hidden;
+body::-webkit-scrollbar{
+  display: none;
 }
 
 @layer base {
@@ -298,4 +298,14 @@ body{
     transform-origin: top center;
     animation: flyEffect 8000ms infinite reverse ease-in-out;
   }
+}
+
+
+.title{
+  background: linear-gradient(90deg, rgba(0, 210, 255, 1) 0%, rgba(0, 255, 150, 1) 50%, rgba(0, 210, 255, 1) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: 0 0 8px rgba(0, 255, 255, 0.5), 0 0 16px rgba(0, 255, 255, 0.3); */
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react"
+import Navbar from "@/components/ui/global/navbar";
 
 export const metadata: Metadata = {
   title: "Mini Projects",
@@ -15,7 +16,9 @@ export default function Main({
   return (
       <html lang="en">
       <body>
-          <Analytics />
+        <Analytics />
+        <Navbar />
+        <div className="h-[76px]"></div>
           {children}
         </body>
       </html>
