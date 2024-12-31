@@ -52,7 +52,7 @@ export default function StickyNotes(): React.ReactNode{
             nt.title = item.title;
             nt.top = parseInt(item.top);
             nt.left = parseInt(item.left);
-            nt.pin = item.pin,
+            nt.pin = item.pin;
             nt.note = item.note
             z.push(nt)
             nt = {
@@ -68,7 +68,9 @@ export default function StickyNotes(): React.ReactNode{
         setAllNotes([...z]);
     }, [notes])
 
-    const handleKeyPress = (e: any) => {
+    const handleKeyPress = (e: React.KeyboardEvent) => {
+        console.log(e);
+        
         if (e.ctrlKey && e.key === "m") {
             e.preventDefault();
             const pinColor = getRandomColor("pin");
@@ -97,9 +99,9 @@ export default function StickyNotes(): React.ReactNode{
             setNotes([localStorage])
         }
     };
-
     useEffect(() => {
-        (window as Window).addEventListener("keydown", handleKeyPress)
+        // const keyPressHandler = (e: React.KeyboardEvent) => handleKeyPress
+        window.addEventListener("keydown", (e:React.KeyboardEvent | any) => handleKeyPress(e))
         setNotes([localStorage]);
         const len = parseInt(localStorage.getItem("MiniCraft.Note.length") || "0");
         setNoteLength(len)
