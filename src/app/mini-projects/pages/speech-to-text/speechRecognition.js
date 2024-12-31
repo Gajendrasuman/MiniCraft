@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-const useSpeechRecognition = (lang: string) => {
-  const [listening, setListening] = useState<boolean>(false);
-  const [transcript, setTranscript] = useState<string>('');
-  const [recognition, setRecognition] = useState<SpeechRecognitionEvent>(null);
+const useSpeechRecognition = (lang) => {
+  const [listening, setListening] = useState(false);
+  const [transcript, setTranscript] = useState('');
+  const [recognition, setRecognition] = useState(null);
 
   useEffect(() => {
-    const SpeechRecognition =(window as SpeechRecognitionEvent).webkitSpeechRecognition;
+    const SpeechRecognition =window.webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
       console.error('Browser does not support Speech Recognition.');
@@ -17,14 +17,14 @@ const useSpeechRecognition = (lang: string) => {
     const recognitionInstance = new SpeechRecognition();
     recognitionInstance.continuous = true;
     recognitionInstance.interimResults = true;
-    recognitionInstance.onresult = (event:SpeechRecognitionEvent ) => {
+    recognitionInstance.onresult = (event) => {
       for (let i = event.resultIndex; i < event.results.length; i++) {
         const result = event.results[i];
         setTranscript(result[0].transcript)
       }
     };
 
-    recognitionInstance.onerror = (error: Event) => {
+    recognitionInstance.onerror = (error) => {
       console.error('Speech Recognition Error:', error);
       };
       

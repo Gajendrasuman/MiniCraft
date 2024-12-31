@@ -236,3 +236,66 @@ body{
 .trans-bottom{
   transition: bottom, height 250ms ease-in;
 }
+
+.lower{
+  box-shadow: inset 0 -2px 5px 3px #fff9;
+  
+}
+.pin-stick{
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: inset 0 0 5px 1px #fff9;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+}
+
+.pin-head{
+  box-shadow: inset 0 -1px 3px 1px #fff9;
+}
+
+.scrollbar-none::-webkit-scrollbar{
+  display: none;
+}
+
+@keyframes test{
+  from{
+    transform: skew(-6deg);
+  }
+  to{
+    transform: skew(6deg);
+  }
+}
+
+@keyframes flyEffect {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(-5deg) rotateY(3deg);
+  }
+  50% {
+    transform: rotateX(8deg) rotateY(-3deg);
+  }
+  75% {
+    transform: rotateX(-5deg) rotateY(4deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+}
+.note{
+  perspective: 800px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+    & > div:nth-child(even){
+    box-shadow: inset 0 2px 55px 2px #0006;
+    transform-origin: top center;
+    animation: flyEffect 8000ms infinite ease-in-out;
+  }
+  & > div:nth-child(odd){
+    box-shadow: inset 0 2px 55px 2px #0006;
+    transform-origin: top center;
+    animation: flyEffect 8000ms infinite reverse ease-in-out;
+  }
+}
