@@ -68,9 +68,7 @@ export default function StickyNotes(): React.ReactNode{
         setAllNotes([...z]);
     }, [notes])
 
-    const handleKeyPress = (e: React.KeyboardEvent) => {
-        console.log(e);
-        
+    const handleKeyPress = (e: globalThis.KeyboardEvent) => {
         if (e.ctrlKey && e.key === "m") {
             e.preventDefault();
             const pinColor = getRandomColor("pin");
@@ -100,8 +98,7 @@ export default function StickyNotes(): React.ReactNode{
         }
     };
     useEffect(() => {
-        // const keyPressHandler = (e: React.KeyboardEvent) => handleKeyPress
-        window.addEventListener("keydown", (e:React.KeyboardEvent | any) => handleKeyPress(e))
+        window.addEventListener("keydown", handleKeyPress)
         setNotes([localStorage]);
         const len = parseInt(localStorage.getItem("MiniCraft.Note.length") || "0");
         setNoteLength(len)
