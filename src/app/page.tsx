@@ -1,15 +1,7 @@
-import { Notable } from "next/font/google";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
-import SparklesText from "@/components/ui/sparkles-text";
 import { BorderBeam } from "@/components/ui/border-beam";
-import PulsatingButton from "@/components/ui/pulsating-button";
-
-const kanit = Notable({
-  weight: "400",
-  subsets: ["latin"]
-});
 
 export default function MiniCraft() {
   return (

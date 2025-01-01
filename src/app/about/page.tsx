@@ -20,13 +20,13 @@ export default function AboutPage() {
                     About Me
                 </h1>
                 <p className="text-xl text-gray-300 mb-6">
-                    Hi! I'm <strong className="text-white">Gajender Suman</strong>, a passionate developer, tech enthusiast, and creator.
+                    Hi! I&apos;m <strong className="text-white">Gajender Suman</strong>, a passionate developer, tech enthusiast, and creator.
                     I specialize in building engaging digital experiences with modern web technologies, including Next.js, TypeScript, Tailwind CSS, and more.
                 </p>
 
                 <p className="text-xl text-gray-300 mb-6">
                     With a focus on performance, design, and usability, my goal is to create beautiful and user-friendly websites and applications.
-                    Whether it's building something from scratch or refining an existing idea, I’m constantly pushing myself to learn and grow.
+                    Whether it&apos;s building something from scratch or refining an existing idea, I&apos;m constantly pushing myself to learn and grow.
                 </p>
 
                 <p className="text-xl text-gray-300 mb-6">

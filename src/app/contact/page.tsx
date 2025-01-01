@@ -17,8 +17,7 @@ export default function ContactPage() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Add your form submission logic here
-        alert("Form submitted!");
+        // alert("Form submitted!");
     };
 
     return (
@@ -32,7 +31,7 @@ export default function ContactPage() {
                 </h1>
 
                 <p className="text-xl text-gray-300 mb-6">
-                    Have a question or want to collaborate on a project? Feel free to reach out! I'd love to hear from you.
+                    Have a question or want to collaborate on a project? Feel free to reach out! I&apos;d love to hear from you.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
