@@ -1,6 +1,6 @@
 "use client"
 
-import {  SyntheticEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Notes{
     id: number;
@@ -69,7 +69,7 @@ export default function StickyNotes(): React.ReactNode{
         setAllNotes([...z]);
     }, [notes])
 
-    const handleClick = (e: SyntheticEvent<HTMLDivElement>) => {        
+    const handleClick = () => {        
         const pinColor = getRandomColor("pin");
         const noteColor = getRandomColor("note");
 
@@ -235,7 +235,7 @@ export default function StickyNotes(): React.ReactNode{
         <main className="bg-bg w-screen text-bg" style={{ height: "calc(100vh - 76px)" }}>
             <div className="container h-full min-w-screen overflow-scroll scrollbar-none relative">
                 {winSize > 1024 ||
-                    <div className="text-text fixed z-[900] left-2 top-24 bg-zinc-600 px-2 py-1 rounded-md font-semibold cursor-pointer" onClick={(e: SyntheticEvent<HTMLDivElement>) => handleClick(e)}>Add Note</div>}
+                    <div className="text-text fixed z-[900] left-2 top-24 bg-zinc-600 px-2 py-1 rounded-md font-semibold cursor-pointer" onClick={handleClick}>Add Note</div>}
                 {allNotes.length > 0 ?
                     allNotes.map(({ id, content, title, top, left, pin, note }, index) => (
                     <div key={index} className={`note w-fit h-fit`} style={{ top: top + "px", left: left + "px", position: "absolute" }} data-id={id}
