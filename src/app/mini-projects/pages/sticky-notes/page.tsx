@@ -1,6 +1,6 @@
 "use client"
 
-import {  useEffect, useState } from "react";
+import {  SyntheticEvent, useEffect, useState } from "react";
 
 interface Notes{
     id: number;
@@ -28,6 +28,7 @@ export default function StickyNotes(): React.ReactNode{
     const [notes, setNotes] = useState<Storage[]>();
     const [allNotes, setAllNotes] = useState<Notes[]>([]);
     const [noteLength, setNoteLength] = useState<number>(0)
+    const [winSize, setWinSize] = useState<number>(1024)
 
     const getRandomColor = (c:string) => {
         const colorArray = colors[c as "pin" | "note"];
@@ -68,6 +69,33 @@ export default function StickyNotes(): React.ReactNode{
         setAllNotes([...z]);
     }, [notes])
 
+    const handleClick = (e: SyntheticEvent<HTMLDivElement>) => {        
+        const pinColor = getRandomColor("pin");
+        const noteColor = getRandomColor("note");
+
+        let size = 1;
+        if (!localStorage.getItem("MiniCraft.Note.length")) {
+            localStorage.setItem("MiniCraft.Note.length", size.toString())
+        }
+        else {
+            size = parseInt(localStorage.getItem("MiniCraft.Note.length") || "0") + 1
+            localStorage.setItem("MiniCraft.Note.length", size.toString())
+        }
+        const id = size - 1;
+
+        localStorage.setItem("MiniCraft.Note." + id.toString(), JSON.stringify({
+            id,
+            title: "Title",
+            content: "Add Your Note Here...",
+            left: Math.floor(Math.random() * 101),
+            top: Math.floor(Math.random() * 101),
+            pin: pinColor,
+            note: noteColor
+        }));
+        setNoteLength(size);
+        setNotes([localStorage])
+    }
+
     const handleKeyPress = (e: globalThis.KeyboardEvent) => {
         if (e.ctrlKey && e.key === "m") {
             e.preventDefault();
@@ -97,8 +125,13 @@ export default function StickyNotes(): React.ReactNode{
             setNotes([localStorage])
         }
     };
+
     useEffect(() => {
         window.addEventListener("keydown", handleKeyPress)
+        setWinSize(window.innerWidth)
+        window.addEventListener("resize", () => {
+            setWinSize(window.innerWidth)
+        })
         setNotes([localStorage]);
         const len = parseInt(localStorage.getItem("MiniCraft.Note.length") || "0");
         setNoteLength(len)
@@ -199,8 +232,10 @@ export default function StickyNotes(): React.ReactNode{
     };
 
     return (
-        <main className="bg-bg w-screen h-screen text-bg">
-            <div className="container min-h-screen min-w-screen overflow-scroll scrollbar-none relative">
+        <main className="bg-bg w-screen text-bg" style={{ height: "calc(100vh - 76px)" }}>
+            <div className="container h-full min-w-screen overflow-scroll scrollbar-none relative">
+                {winSize > 1024 ||
+                    <div className="text-text fixed z-[900] left-2 top-24 bg-zinc-600 px-2 py-1 rounded-md font-semibold cursor-pointer" onClick={(e: SyntheticEvent<HTMLDivElement>) => handleClick(e)}>Add Note</div>}
                 {allNotes.length > 0 ?
                     allNotes.map(({ id, content, title, top, left, pin, note }, index) => (
                     <div key={index} className={`note w-fit h-fit`} style={{ top: top + "px", left: left + "px", position: "absolute" }} data-id={id}
@@ -240,9 +275,11 @@ export default function StickyNotes(): React.ReactNode{
                         </div>
                     </div>
                     
-                    ))
+                ))
                     :
-                    <h1 className="text-text text-3xl top-1/2 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 flex gap-1 text-zinc-700">Press <span className="italic rounded-full bg-zinc-800 px-2 block">Ctrl + m</span> to Make a Note</h1>
+                    winSize > 1024 &&
+                        <h1 className="text-text text-3xl top-1/2 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 flex gap-1 text-zinc-700">Press <span className="italic rounded-full bg-zinc-800 px-2 block">Ctrl + m</span> to Make a Note</h1>
+                        
             }
 
             </div>

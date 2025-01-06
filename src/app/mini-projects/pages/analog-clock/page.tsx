@@ -22,7 +22,7 @@ export default function AnalogClock(): React.ReactNode {
     }, []);
     
     return (
-        <section className="bg-bg min-w-screen min-h-screen text-text flex items-center justify-center">
+        <section className="bg-bg min-w-screen text-text flex items-center justify-center" style={{ height: "calc(100vh - 76px)" }}>
             <div className="w-fit h-fit rounded-full p-1 border-double border-white border-8">
                 <div className="dial w-64 bg-white border-8 border-black aspect-square rounded-full relative">
                     <div className="12-6 z-[4] absolute w-1 h-full bg-bg" style={{ left: "calc(50% - 2px)" }}>

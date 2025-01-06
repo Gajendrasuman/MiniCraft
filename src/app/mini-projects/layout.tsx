@@ -15,7 +15,7 @@ export default function Main({
 }>) {
   return (
       <html lang="en">
-      <body>
+      <body className="bg-bg">
         <Analytics />
         <Navbar />
         <div className="h-[76px]"></div>

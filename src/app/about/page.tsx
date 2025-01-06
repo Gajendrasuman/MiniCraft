@@ -30,9 +30,12 @@ export default function AboutPage() {
                 </p>
 
                 <p className="text-xl text-gray-300 mb-6">
-                    I am also active on social media and share my experiences, insights, and projects. You can connect with me on <Link href="https://twitter.com/Orogamyyy" passHref>
+                        I am also active on social media and share my experiences, insights, and projects. You can connect with me on&nbsp;
+                        <Link href="https://twitter.com/Orogamyyy" rel="noopener noreferrer" target="_blank" passHref>
                         <span className="text-pink-500 hover:text-pink-400">Twitter</span>
-                    </Link> or check out my work on <Link href="https://github.com/Gajendrasuman" passHref>
+                        </Link> and <Link href="https://www.linkedin.com/in/gajender868" rel="noopener noreferrer" target="_blank" passHref>
+                            <span className="text-pink-500 hover:text-pink-400">Linkedin</span>
+                        </Link> or check out my work on <Link href="https://github.com/Gajendrasuman" rel="noopener noreferrer" target="_blank" passHref>
                         <span className="text-blue-500 hover:text-blue-400">GitHub</span>
                     </Link>.
                 </p>

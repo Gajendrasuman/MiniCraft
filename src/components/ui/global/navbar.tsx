@@ -8,7 +8,7 @@ const Navbar = () => {
     const closeMenu = () => setIsMenuOpen(false);
 
     return (
-        <nav className="bg-bg fixed w-full top-0 left-0 z-50 py-5">
+        <nav className="bg-bg fixed w-full top-0 left-0 z-[999] py-5">
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
                     <Link href="/">MiniCraft</Link>

@@ -12,7 +12,7 @@ export default function MiniProjects(): React.ReactNode {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
                     <Link href="/mini-projects/pages/analog-clock" passHref>
-                        <div className="relative rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:transition-all">
+                        <div className="relative project rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:transition-all">
                             <video muted loop autoPlay playsInline className="w-full h-72 object-cover transition-transform transform hover:scale-110">
                                 <source src="/assets/images/home/analog_clock.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
@@ -24,7 +24,7 @@ export default function MiniProjects(): React.ReactNode {
                     </Link>
 
                     <Link href="/mini-projects/pages/mi-tv" passHref>
-                        <div className="relative rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:transition-all">
+                        <div className="relative project rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:transition-all">
                             <Image
                                 src="/assets/images/home/mi_tv.png"
                                 width={150}
@@ -40,7 +40,7 @@ export default function MiniProjects(): React.ReactNode {
                     </Link>
 
                     <Link href="/mini-projects/pages/speech-to-text" passHref>
-                        <div className="relative rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:transition-all">
+                        <div className="relative project rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:transition-all">
                             <Image
                                 src="/assets/images/home/speech_to_text.png"
                                 width={150}
@@ -56,7 +56,7 @@ export default function MiniProjects(): React.ReactNode {
                     </Link>
 
                     <Link href="/mini-projects/pages/sticky-notes" passHref>
-                        <div className="relative rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:transition-all">
+                        <div className="relative project rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:transition-all">
                             <Image
                                 src="/assets/images/home/sticky_notes.png"
                                 width={150}
