@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://www.minicraft.com/",
     images: [
       {
-        url: "/assets/logo/logo.png",
+        url: "/assets/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "MiniCraft Project Gallery",
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "MiniCraft - Showcase Your Creativity",
     description: "Explore an inspiring collection of mini projects that highlight creativity and innovation. Dive in on MiniCraft!",
-    images: ["/assets/logo/logo.png"],
+    images: ["/assets/images/og-image.png"],
   },
   icons: {
     icon: "/assets/logo/logo.png"
