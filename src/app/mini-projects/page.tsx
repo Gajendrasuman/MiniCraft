@@ -70,6 +70,21 @@ export default function MiniProjects(): React.ReactNode {
                             </div>
                         </div>
                     </Link>
+                    <Link href="https://mindorbit.vercel.app" passHref rel="noreferrer noopener" target="_blank">
+                        <div className="relative project rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:transition-all">
+                            <Image
+                                src="/assets/images/home/mindorbit.png"
+                                width={150}
+                                height={120}
+                                alt="Sticky Notes"
+                                loader={imgLoader}
+                                className="w-full h-72 object-cover transition-transform transform hover:scale-110"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 text-lg font-semibold opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                MindOrbit
+                            </div>
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="absolute bottom-10 right-10">
